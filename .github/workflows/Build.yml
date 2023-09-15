@@ -25,15 +25,18 @@ jobs:
     - name: Customize Spider
       working-directory: ./project
       run: |
+         sed -i 's/gradle-7.4.2-all/gradle-7.5-bin/g' gradle/wrapper/gradle-wrapper.properties
          #添加Misc
-         curl -L https://github.com/zhixc/CatVodTVSpider/raw/main/app/src/main/java/com/github/catvod/utils/Misc.java > app/src/main/java/com/github/catvod/utils/Misc.java
+         #curl -L https://github.com/zhixc/CatVodTVSpider/raw/main/app/src/main/java/com/github/catvod/utils/Misc.java > app/src/main/java/com/github/catvod/utils/Misc.java
+         #curl -L https://raw.githubusercontent.com/CatVodTVOfficial/CatVodTVSpider/master/app/src/main/java/com/github/catvod/utils/Misc.java > app/src/main/java/com/github/catvod/utils/Misc.java
          
          #添加JavDb
          #cp ../app/src/main/java/com/github/catvod/spider/JavDb.java app/src/main/java/com/github/catvod/spider/JavDb.java
 
          #添加AppYsV2
-         curl -L https://github.com/zhixc/CatVodTVSpider/raw/main/app/src/main/java/com/github/catvod/spider/AppYsV2.java > app/src/main/java/com/github/catvod/spider/AppYsV2.java
-         sed -i 's/com.github.catvod.utils.okhttp.OkHttpUtil/com.github.catvod.net.OkHttp/g;s/OkHttpUtil/OkHttp/g' app/src/main/java/com/github/catvod/spider/AppYsV2.java
+         #curl -L https://github.com/zhixc/CatVodTVSpider/raw/main/app/src/main/java/com/github/catvod/spider/AppYsV2.java > app/src/main/java/com/github/catvod/spider/AppYsV2.java
+         #curl -L https://raw.githubusercontent.com/CatVodTVOfficial/CatVodTVSpider/master/app/src/main/java/com/github/catvod/spider/AppYsV2.java > app/src/main/java/com/github/catvod/spider/AppYsV2.java
+         #sed -i 's/com.github.catvod.utils.okhttp.OkHttpUtil/com.github.catvod.net.OkHttp/g;s/OkHttpUtil/OkHttp/g' app/src/main/java/com/github/catvod/spider/AppYsV2.java
          #curl -L https://github.com/xxxyyy888/CatVodSpider/raw/main/app/src/main/java/com/github/catvod/spider/AppYsV2.java > app/src/main/java/com/github/catvod/spider/AppYsV2.java
          
          #添加Live2Vod
@@ -43,7 +46,7 @@ jobs:
 
          #添加豆瓣，6V，飘花磁力
          curl -L https://github.com/zhixc/CatVodTVSpider/raw/main/app/src/main/java/com/github/catvod/spider/Douban.java > app/src/main/java/com/github/catvod/spider/Douban.java
-         curl -L https://github.com/zhixc/CatVodTVSpider/raw/main/app/src/main/java/com/github/catvod/spider/SixV.java > app/src/main/java/com/github/catvod/spider/SixV.java
+         #curl -L https://github.com/zhixc/CatVodTVSpider/raw/main/app/src/main/java/com/github/catvod/spider/SixV.java > app/src/main/java/com/github/catvod/spider/SixV.java
          curl -L https://github.com/zhixc/CatVodTVSpider/raw/main/app/src/main/java/com/github/catvod/spider/PiaoHua.java > app/src/main/java/com/github/catvod/spider/PiaoHua.java
          
          #添加XYQBiu.java
@@ -58,6 +61,7 @@ jobs:
          
          #
          #sed -i 's/https:\/\/s1.ax1x.com\/2023\/05\/04\/p9tgI81.png/http:\/\/image.coolapk.com\/feed\/2023\/0817\/10\/15491134_1b0929b1_9775_1639_274@512x512.png/g' app/src/main/java/com/github/catvod/utils/Image.java
+         rm -rf app/src/main/java/com/github/catvod/spider/JSDemo.java
          rm -rf app/src/main/java/com/github/catvod/spider/Ysj.java
          rm -rf app/src/main/java/com/github/catvod/spider/Dm84.java
          rm -rf app/src/main/java/com/github/catvod/spider/JSDemo.java
