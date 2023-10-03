@@ -37,7 +37,7 @@ jobs:
 
          #添加豆瓣，6V，飘花磁力
          curl -L https://github.com/zhixc/CatVodTVSpider/raw/main/app/src/main/java/com/github/catvod/spider/Douban.java > app/src/main/java/com/github/catvod/spider/Douban.java
-         #curl -L https://github.com/zhixc/CatVodTVSpider/raw/main/app/src/main/java/com/github/catvod/spider/SixV.java > app/src/main/java/com/github/catvod/spider/SixV.java
+         curl -L https://github.com/zhixc/CatVodTVSpider/raw/main/app/src/main/java/com/github/catvod/spider/SixV.java > app/src/main/java/com/github/catvod/spider/SixV.java
          curl -L https://github.com/zhixc/CatVodTVSpider/raw/main/app/src/main/java/com/github/catvod/spider/PiaoHua.java > app/src/main/java/com/github/catvod/spider/PiaoHua.java
          
          #添加XYQBiu.java
@@ -60,10 +60,12 @@ jobs:
          rm -rf app/src/main/java/com/github/catvod/spider/Ying.java
          rm -rf app/src/main/java/com/github/catvod/spider/TuGou.java
          rm -rf app/src/main/java/com/github/catvod/spider/Miss.java
+         rm -rf app/src/main/java/com/github/catvod/spider/Star.java
          rm -rf app/src/main/java/com/github/catvod/spider/Local.java
          rm -rf app/src/main/java/com/github/catvod/spider/Jable.java
          rm -rf app/src/main/java/com/github/catvod/spider/Supjav.java
          rm -rf app/src/main/java/com/github/catvod/spider/Hanime.java
+         rm -rf app/src/main/java/com/github/catvod/spider/Notice.java
          rm -rf app/src/main/java/com/github/catvod/spider/YingShi.java                  
          rm -rf app/src/main/java/com/github/catvod/spider/Eighteen.java
 
