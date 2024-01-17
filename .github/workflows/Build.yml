@@ -26,6 +26,10 @@ jobs:
       working-directory: ./project
       run: |
          sed -i 's/gradle-7.4.2-all/gradle-7.5-bin/g' gradle/wrapper/gradle-wrapper.properties
+         sed -i 's/www.aliyundrive.com/(www.aliyundrive.com|www.alipan.com)/g' app/src/main/java/com/github/catvod/spider/Zhaozy.java
+         
+         curl -L https://raw.githubusercontent.com/FongMi/CatVodSpider/56e60854cfc91282548e2686e7c79e00bf11987a/app/src/main/java/com/github/catvod/spider/Dovx.java > app/src/main/java/com/github/catvod/spider/Dovx.java
+        
          
          #飘花磁力
          cp ../app/src/main/java/com/github/catvod/spider/PiaoHua.java app/src/main/java/com/github/catvod/spider/PiaoHua.java
@@ -54,6 +58,7 @@ jobs:
          rm -rf app/src/main/java/com/github/catvod/spider/Star.java
          rm -rf app/src/main/java/com/github/catvod/spider/Local.java
          rm -rf app/src/main/java/com/github/catvod/spider/JustLive.java
+         rm -rf app/src/main/java/com/github/catvod/spider/Jianpian.java
          rm -rf app/src/main/java/com/github/catvod/spider/Jable.java
          rm -rf app/src/main/java/com/github/catvod/spider/Supjav.java
          rm -rf app/src/main/java/com/github/catvod/spider/Hanime.java
@@ -61,6 +66,8 @@ jobs:
          rm -rf app/src/main/java/com/github/catvod/spider/Notice.java
          rm -rf app/src/main/java/com/github/catvod/spider/YingShi.java                  
          rm -rf app/src/main/java/com/github/catvod/spider/Eighteen.java
+         rm -rf app/src/main/java/com/github/catvod/spider/NiNi.java
+         rm -rf app/src/main/java/com/github/catvod/spider/Cs1369.java
 
     - name: Build the app
       working-directory: ./project
